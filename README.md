@@ -12,6 +12,31 @@ vue create vue3-cli-bidding
 ```
 vue add vue-next
 ```
+## vue3的正确使用姿势
++ 钩子函数
+```
+vue2                vs              vue3
+beforeCreate                        setup
+created                             setup
+beforeMount                         onBeforeMount
+mounted                             onMounted
+beforeUpdate                        onBeforeUpdate
+updated                             onUpdated
+beforeDestroy                       onBeforeUnmount
+destroyed                           onUnmount
+errorCaptured                       onErrorCaptured
+```
++ 函数式API
+```
+createApp
+reactive        // 创建响应式数据对象：对象式
+ref             // 创建响应式对象：基本数据类型装箱
+toRefs          // 将响应式数据转换为单一响应式数据
+isRef           // 判断某值是否是引用类型
+computed        // 创建计算属性
+watch           // 创建watch监听
+watchEffect
+```
 ## Project setup
 ```
 yarn install
